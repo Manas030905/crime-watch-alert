@@ -27,11 +27,10 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative overflow-hidden border-b border-border">
-        <div className="absolute inset-0 bg-gradient-primary opacity-50" />
-        <div className="container relative mx-auto px-6 py-24">
+      <section className="border-b border-border bg-card">
+        <div className="container mx-auto px-6 py-24">
           <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
-            <div className="w-20 h-20 rounded-full bg-gradient-accent flex items-center justify-center mb-6 shadow-glow animate-pulse">
+            <div className="w-20 h-20 rounded-full bg-primary flex items-center justify-center mb-6">
               <Shield className="w-10 h-10 text-primary-foreground" />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
@@ -60,8 +59,8 @@ const Index = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <Card key={index} className="p-8 shadow-card hover:shadow-glow transition-all duration-300 border-border">
-              <div className="w-12 h-12 rounded-lg bg-gradient-accent flex items-center justify-center mb-4 shadow-glow">
+            <Card key={index} className="p-8 border-border">
+              <div className="w-12 h-12 rounded-lg bg-primary flex items-center justify-center mb-4">
                 <feature.icon className="w-6 h-6 text-primary-foreground" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">{feature.title}</h3>

@@ -77,7 +77,7 @@ const Dashboard = () => {
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-gradient-accent flex items-center justify-center shadow-glow">
+              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
                 <Shield className="w-5 h-5 text-primary-foreground" />
               </div>
               <div>
@@ -98,7 +98,7 @@ const Dashboard = () => {
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {stats.map((stat, index) => (
-            <Card key={index} className="p-6 shadow-card border-border">
+            <Card key={index} className="p-6 border-border">
               <div className="flex items-center justify-between mb-4">
                 <div className={`p-3 rounded-lg bg-secondary ${stat.color}`}>
                   <stat.icon className="w-5 h-5" />
