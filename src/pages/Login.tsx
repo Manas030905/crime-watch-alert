@@ -7,6 +7,7 @@ import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import securityBg from "@/assets/security-bg.jpg";
 import { toast } from "sonner";
+import api from "@/lib/api";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -22,11 +23,18 @@ const Login = () => {
       return;
     }
 
-    // Simulate login
-    toast.success(`Logging in as ${userType}...`);
-    setTimeout(() => {
-      navigate("/dashboard");
-    }, 1000);
+    // Call backend
+    toast.promise(
+      api.login(email, password).then((user) => {
+        // You could store user info in localStorage or context here
+        navigate("/dashboard");
+      }),
+      {
+        loading: `Logging in as ${userType}...`,
+        success: "Logged in",
+        error: (err) => String(err.message || "Login failed"),
+      }
+    );
   };
 
   return (
