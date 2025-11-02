@@ -38,7 +38,7 @@ const AlertCard = ({ type, title, location, time, description, status, confidenc
   };
 
   return (
-    <Card className="p-6 shadow-card hover:shadow-glow transition-all duration-300 border-border">
+    <Card className="p-6 border-border">
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-center gap-3">
           <div className={`p-2 rounded-lg ${type === "critical" ? "bg-destructive/20" : type === "warning" ? "bg-warning/20" : "bg-secondary"}`}>
@@ -72,7 +72,7 @@ const AlertCard = ({ type, title, location, time, description, status, confidenc
           <div className="flex items-center gap-2">
             <div className="w-32 h-2 bg-secondary rounded-full overflow-hidden">
               <div 
-                className="h-full bg-gradient-accent transition-all duration-300"
+                className="h-full bg-primary"
                 style={{ width: `${confidence}%` }}
               />
             </div>

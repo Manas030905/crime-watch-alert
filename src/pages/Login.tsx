@@ -40,9 +40,9 @@ const Login = () => {
       </div>
 
       {/* Login Card */}
-      <Card className="relative z-10 w-full max-w-md mx-4 p-8 shadow-card border-border">
+      <Card className="relative z-10 w-full max-w-md mx-4 p-8 border-border">
         <div className="flex flex-col items-center mb-8">
-          <div className="w-16 h-16 rounded-full bg-gradient-accent flex items-center justify-center mb-4 shadow-glow">
+          <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center mb-4">
             <Shield className="w-8 h-8 text-primary-foreground" />
           </div>
           <h1 className="text-3xl font-bold text-foreground">Crime Detection System</h1>
